@@ -1073,8 +1073,9 @@ size_t retro_serialize_size (void)
 
 bool retro_serialize(void *data, size_t size)
 {
-    if (savestates_save_m64p(data, size))
-        return true;
+    /* THIS SEG FAULTS */
+    //if (savestates_save_m64p(data, size))
+    //    return true;
 
     return false;
 }
